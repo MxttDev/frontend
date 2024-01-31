@@ -23,9 +23,13 @@ const Navbar = () => {
   const handleClick = () => {
     signIn("google");
   };
+
   
-  if (status === "authenticated") {
+  
+  if (session) {
     return <NavbarAuth/>
+  } else {
+    
   }
 
 

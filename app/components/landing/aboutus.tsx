@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 
 import { useState } from 'react'
 import Image from 'next/image'
-import earth from '../assets/earth.png'
+import earth from '@/public/earth.png'
 import {
   CheckBadgeIcon
 } from "@heroicons/react/24/solid";
