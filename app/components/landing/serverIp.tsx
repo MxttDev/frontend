@@ -17,7 +17,7 @@ const serverIp = () => {
               </h1>
               <p className="text-xl pt-5 px-80 text-white">
                 Pyron has everything you need: from vanilla survival to wacky
-                mini games, weve got it all! Plus with our easy-to-use search
+                mini games weve got it all! Plus with our easy-to-use search
                 feature youll be playing on your new favorite server in no
                 time! Join the Pyron community and discover endless
                 possibilities in the world of Minecraft!
