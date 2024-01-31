@@ -22,12 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" date-theme="winter">
-     
+      <head><link rel="stylesheet" href="/globals.css"/></head>
+      <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=9" />
       <body className={inter.className}>{children}</body>
       <link rel="icon" type="x-icon" href="/favicon.ico"></link>
-      
-    
-      
+
     </html>
   );
 }
