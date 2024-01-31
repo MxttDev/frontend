@@ -16,16 +16,12 @@ const serverIp = () => {
                 Looking for a server to play on? We got it covered.
               </h1>
               <p className="text-xl pt-5 px-80 text-white">
-                Minefort has everything you need: from vanilla survival to wacky
+                Pyron has everything you need: from vanilla survival to wacky
                 mini games, we've got it all! Plus, with our easy-to-use search
                 feature, you'll be playing on your new favorite server in no
-                time! Join the Minefort community and discover endless
+                time! Join the Pyron community and discover endless
                 possibilities in the world of Minecraft!
               </p>
-              <div className="flex flex-col items-center pt-10 ">
-                    <Image className="border-gray-800 border-2" src={ip} width={1200} height={1200} alt=""/>
-                  
-                </div>
             </div>
           </div>
         </>
