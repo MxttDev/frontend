@@ -2,6 +2,9 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useSession, signIn } from "next-auth/react"
+import NavbarAuth from "./navbarAuth";
+
 
 const navigation = [
   { name: 'SERVER LIST', href: '#', current: false },
@@ -14,7 +17,20 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ')
 }
 
-const Navbar = () => (
+const Navbar = () => {
+  const { data: session, status } = useSession()
+
+  const handleClick = () => {
+    signIn("google");
+  };
+  
+  if (status === "authenticated") {
+    return <NavbarAuth/>
+  }
+
+
+
+  return (
     <Disclosure as="nav" className="bg-main"> 
       {({ open }) => (
         <>
@@ -23,7 +39,7 @@ const Navbar = () => (
               <div className="absolute text-white font-bold text-5xl">
                 <h3>PYRON</h3>
               </div>
-              <div className="absolute right-80 flex items-center"> {/* Navigational bar */}
+              <div className="absolute right-96 flex items-center"> {/* Navigational bar */}
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -38,28 +54,19 @@ const Navbar = () => (
                       </a>
                     ))}
                 </div>
+               
               <div className="absolute inset-y-0 right-0 flex items-center">
+                
                 <button
+                  onClick={handleClick}
                   type="button"
-                  className="middle none center rounded-2xl bg-white py-3 px-6 font-roboto font-semibold pl-12 pr-12"
+                  className="middle none center rounded-2xl bg-green-400 py-3 px-6 font-roboto font-semibold pl-12 pr-12"
                 >
-                  Your Server
+                  Continue with Google
                 </button>
+                
 
-                {/* Profile */}
-                <Menu as="div" className="relative ml-6">
-                  <div>
-                    <Menu.Button className="flex">
-                      
-                      <img
-                        className="h-11 w-11 rounded-lg" 
-                        src="https://mc-heads.net/avatar/Asylx"
-                        alt=""
-                      /> 
-                    </Menu.Button>
-                  </div> 
-                  
-                </Menu>
+              
               </div>
             </div>
           </div>
@@ -85,6 +92,7 @@ const Navbar = () => (
         </>
       )}
     </Disclosure>
-);
+  );
+};
   
 export default Navbar;

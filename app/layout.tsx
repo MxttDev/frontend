@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../public/globals.css";
+import { NextAuthProvider } from "./providers";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,12 +24,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" date-theme="winter">
-      <head><link rel="stylesheet" href="/globals.css"/></head>
+      <head>
+        <link rel="stylesheet" href="/globals.css" />
+      </head>
       <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=9" />
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {" "}
+        <NextAuthProvider>
+          
+          {children}
+        </NextAuthProvider>
+      </body>
       <link rel="icon" type="x-icon" href="/favicon.ico"></link>
-
     </html>
   );
 }
