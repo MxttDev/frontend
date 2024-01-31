@@ -9,10 +9,10 @@ import {
   CheckBadgeIcon
 } from "@heroicons/react/24/solid";
 
-import { useSession } from "next-auth/react"
+
 
 const aboutus = () => {
-  const { data: session, status } = useSession()
+  
 
   return (
     <Disclosure as="nav" className="bg-main pb-12">
