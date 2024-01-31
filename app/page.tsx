@@ -4,6 +4,8 @@ import Navbar from "./components/navbar";
 import Aboutus from "./components/landing/aboutus";
 import Pricing from "./components/landing/pricing";
 import Stats from "./components/landing/stats";
+import Serverip from "./components/landing/serverIp";
+
 
 export default function Home() {
   return (
@@ -12,6 +14,7 @@ export default function Home() {
         <Aboutus/>  {/* Initiate aboutusSection */ }
         <Pricing/>  {/* Initiate aboutusSection */ }
         <Stats/>  {/* Initiate aboutusSection */ }
+        <Serverip/>  {/* Initiate aboutusSection */ }
       </div>
   )
 }
