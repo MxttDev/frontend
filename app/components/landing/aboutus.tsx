@@ -42,7 +42,7 @@ const aboutus = () => {
                 <div>
                     <button
                         type="button"
-                        className="middle none center rounded-2xl bg-green-400 py-3 px-6 font-roboto font-semibold pl-10 pr-10"
+                        className="middle none center rounded-2xl bg-green-400 py-3 px-6 font-roboto font-bold pl-20 pr-20"
                     >
                     Create Server
                     </button>

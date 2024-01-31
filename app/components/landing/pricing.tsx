@@ -7,7 +7,7 @@ import { CheckBadgeIcon } from "@heroicons/react/24/solid";
 
 const pricing = () => {
   return (
-    <Disclosure as="nav" className="bg-main pb-12">
+    <Disclosure as="div" className="bg-main pb-12">
       {({ open }) => (
         <>
           <div className="relative w-full h-full">
