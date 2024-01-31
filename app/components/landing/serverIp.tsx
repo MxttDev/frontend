@@ -22,10 +22,7 @@ const serverIp = () => {
                 time! Join the Pyron community and discover endless
                 possibilities in the world of Minecraft!
               </p>
-              <div className="flex flex-col items-center pt-10 ">
-                    
-                  
-                </div>
+              
             </div>
           </div>
         </>
